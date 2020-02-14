@@ -1,0 +1,12 @@
+{% extends "layouts/default.njk" %}
+
+{% from 'components/app-container/app-container.template.njk' import AppContainer %}
+{% from 'components/sidebar-menu/sidebar-menu.template.njk' import SidebarMenu %}
+{% from 'components/content-section/content-section.template.njk' import ContentSection %}
+
+{% block page %}
+    {{ AppContainer(
+        sidebarSlot = SidebarMenu,
+        defaultSlot = ContentSection
+    ) }}
+{% endblock %}
