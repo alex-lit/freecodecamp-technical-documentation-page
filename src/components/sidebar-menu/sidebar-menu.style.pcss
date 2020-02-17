@@ -1,3 +1,31 @@
 .sidebar-menu {
-
+  padding-top: 92px;
+  & header {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    background-image: linear-gradient(
+      90deg,
+      var(--indigo--900),
+      var(--indigo--700)
+    );
+    box-shadow: var(--box-shadow);
+    @media screen and (width <= 640px) {
+      width: 100%;
+    }
+  }
+  & a {
+    color: var(--white);
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

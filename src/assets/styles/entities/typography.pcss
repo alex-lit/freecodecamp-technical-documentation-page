@@ -6,7 +6,7 @@
   font-size: 1rem;
   line-height: 1.4;
 
-  & *:first-child {
+  & > *:first-child {
     margin-top: 0;
   }
 
@@ -29,7 +29,7 @@
     display: block;
     overflow: hidden;
     width: 10em;
-    content: '';
+    content: "";
   }
 
   & li p::before {
@@ -131,7 +131,7 @@
     box-shadow: var(--box-shadow--active);
     vertical-align: bottom;
 
-    @nest [data-darkmode='true'] & {
+    @nest [data-darkmode="true"] & {
       box-shadow: none;
     }
   }
@@ -170,7 +170,7 @@
     border-radius: 4px;
     box-shadow: var(--box-shadow--active);
 
-    @nest [data-darkmode='true'] & {
+    @nest [data-darkmode="true"] & {
       box-shadow: none;
     }
   }
@@ -206,7 +206,7 @@
     box-shadow: var(--box-shadow--active);
     font-size: 14px;
 
-    @nest [data-darkmode='true'] & {
+    @nest [data-darkmode="true"] & {
       box-shadow: none;
     }
   }
@@ -278,15 +278,22 @@
     background-color: transparent;
     font-family: var(--font-family--monospace);
     font-size: 14px;
+    display: block;
+    padding: 20px;
+    background-color: var(--gray--100);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow--active);
+    border: 1px solid var(--gray--200);
+    margin: 20px 0;
   }
 
   & pre:has(code) {
     padding: 20px;
-    background-color: var(--gray--50);
+    background-color: var(--gray--100);
     border-radius: 4px;
     box-shadow: var(--box-shadow--active);
 
-    @nest [data-darkmode='true'] & {
+    @nest [data-darkmode="true"] & {
       box-shadow: none;
     }
   }

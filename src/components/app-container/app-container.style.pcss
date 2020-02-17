@@ -1,15 +1,29 @@
 .app-container {
   display: grid;
   grid-template-columns: 320px auto;
+  height: 100vh;
+  overflow: hidden;
+
+  @media screen and (width <= 640px) {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 .app-container__sidebar {
-  background-color: var(--indigo);
-  padding: 40px 20px;
+  background-color: color-mod(var(--indigo) alpha(1));
   color: var(--white);
   height: 100vh;
+  overflow: auto;
+  box-shadow: var(--box-shadow);
+  @media screen and (width <= 640px) {
+    height: 50vh;
+  }
 }
 .app-container__main {
   padding: 40px 20px;
   height: 100vh;
   overflow: auto;
+  @media screen and (width <= 640px) {
+    height: 50vh;
+  }
 }
